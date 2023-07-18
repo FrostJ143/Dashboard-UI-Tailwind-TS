@@ -3,32 +3,37 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --main-bg: #2a3447;
-    --soft-bg: #384256;
-    --dark-bg: #222b3c;
-    --main-color: #fff;
-    --soft-color: #ddd;
-    --dark-color: #2a3447;
-  }
+    :root {
+        --main-bg: #2a3447;
+        --soft-bg: #384256;
+        --dark-bg: #222b3c;
+        --main-color: #fff;
+        --soft-color: #ddd;
+        --dark-color: #2a3447;
+        --navbar-height: 48px;
+        --footer-height: 32px;
+        --content-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+    }
 }
 
 @layer components {
-  .flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    .flex-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .grid-box-border {
+        @apply rounded-md border-2 border-solid border-soft;
+    }
 }
-
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  a {
+}
+
+a {
     text-decoration: none;
     color: inherit;
-  }
+}
