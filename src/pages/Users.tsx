@@ -1,5 +1,5 @@
 import DataTable from "../components/dataTable/DataTable";
-import { GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import { GridColDef } from "@mui/x-data-grid";
 import { userRows } from "../data";
 import { useState } from "react";
 import Add from "../components/Add";
@@ -7,49 +7,53 @@ import Add from "../components/Add";
 const columns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 90 },
     {
-        field: "avatar",
+        field: "img",
         headerName: "Avatar",
         width: 100,
-        renderCell: (params) => (
-            <img
-                src={params.row.img || "/noavatar.png"}
-                alt=""
-                className="h-8 w-8 rounded-full object-cover"
-            />
-        ),
+        renderCell: (params) => {
+            return (
+                <img
+                    src={params.row.img || "/noavatar.png"}
+                    alt=""
+                    className="h-12 w-12 rounded-full object-cover"
+                />
+            );
+        },
     },
     {
         field: "firstName",
+        type: "string",
         headerName: "First name",
-        width: 150,
-        editable: true,
+        width: 120,
     },
     {
         field: "lastName",
+        type: "string",
         headerName: "Last name",
+        width: 120,
+    },
+    {
+        field: "email",
+        type: "string",
+        headerName: "Email",
+        width: 200,
+    },
+    {
+        field: "phone",
+        type: "string",
+        headerName: "Phone",
+        width: 120,
+    },
+    {
+        field: "createdAt",
+        headerName: "Created At",
+        width: 120,
+        type: "string",
+    },
+    {
+        field: "verified",
+        headerName: "Verified",
         width: 150,
-        editable: true,
-    },
-    {
-        field: "age",
-        headerName: "Age",
-        type: "number",
-        width: 90,
-        editable: true,
-    },
-    {
-        field: "fullName",
-        headerName: "Full name",
-        description: "This column has a value getter and is not sortable.",
-        sortable: false,
-        width: 160,
-        valueGetter: (params: GridValueGetterParams) =>
-            `${params.row.firstName || ""} ${params.row.lastName || ""}`,
-    },
-    {
-        field: "status",
-        headerName: "Status",
-        width: 100,
         type: "boolean",
     },
 ];

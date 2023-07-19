@@ -2,7 +2,9 @@ import Footer from "./components/Footer";
 import Menu from "./components/Menu";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import Product from "./pages/Product";
 import Products from "./pages/Products";
+import User from "./pages/User";
 import Users from "./pages/Users";
 import "./styles/index.css";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
@@ -42,6 +44,8 @@ function App() {
                     path: "/products",
                     element: <Products />,
                 },
+                { path: "/users/:id", element: <User /> },
+                { path: "/products/:id", element: <Product /> },
             ],
         },
     ]);
