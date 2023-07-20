@@ -14,7 +14,7 @@ interface SingleProps {
 
 const Single = (props: SingleProps) => {
     return (
-        <div className="flex h-full flex-col sm:flex-row">
+        <div className="flex h-full flex-col lg:flex-row">
             <div className="flex basis-1/2 flex-col gap-4">
                 <div className="flex flex-col gap-4">
                     <div className="flex items-center gap-4">
