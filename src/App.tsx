@@ -14,8 +14,8 @@ function App() {
         return (
             <div className="overflow-x-hidden overflow-y-hidden bg-main font-inter text-main">
                 <Navbar />
-                <div className="flex h-[var(--content-height)] overflow-hidden">
-                    <div className="w-64 border-r border-solid border-soft px-5 py-1">
+                <div className="flex lg:h-[var(--content-height)] lg:overflow-hidden">
+                    <div className="w-max border-r border-solid border-soft px-2 py-1 lg:w-64 lg:px-5">
                         <Menu />
                     </div>
                     <div className="w-full px-5 py-1">

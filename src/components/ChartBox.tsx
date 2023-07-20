@@ -12,7 +12,7 @@ interface ChartBoxProps {
 
 const ChartBox = (props: ChartBoxProps) => {
     return (
-        <div className="flex h-full px-3 py-3">
+        <div className="flex h-full flex-col px-3 py-3 sm:flex-row">
             <div className="flex basis-3/5 flex-col justify-between">
                 <div className="flex items-center">
                     <img src={props.icon} alt="" />

@@ -14,7 +14,7 @@ import {
 
 const Home = () => {
     return (
-        <div className="grid h-full grid-cols-4 grid-rows-4 gap-4">
+        <div className=" grid h-full auto-rows-[minmax(120px,auto)] gap-4 sm:grid-rows-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             <div className="grid-box-border row-span-3">
                 <Topdeal />
             </div>
@@ -33,7 +33,7 @@ const Home = () => {
             <div className="grid-box-border">
                 <ChartBox {...chartBoxRevenue} />
             </div>
-            <div className="grid-box-border col-span-2 row-span-2">
+            <div className="grid-box-border col-span-2 row-span-2 hidden md:block">
                 <BigChartBox />
             </div>
             <div className="grid-box-border">

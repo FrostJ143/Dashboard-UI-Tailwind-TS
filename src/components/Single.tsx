@@ -14,7 +14,7 @@ interface SingleProps {
 
 const Single = (props: SingleProps) => {
     return (
-        <div className="flex h-full">
+        <div className="flex h-full flex-col sm:flex-row">
             <div className="flex basis-1/2 flex-col gap-4">
                 <div className="flex flex-col gap-4">
                     <div className="flex items-center gap-4">
@@ -35,7 +35,7 @@ const Single = (props: SingleProps) => {
                 </div>
                 <hr className="w-[90%] border-[0.5px] border-solid border-gray-500" />
                 {props.chart && (
-                    <ResponsiveContainer width="90%" height="100%">
+                    <ResponsiveContainer width="90%" height="100%" className="hidden lg:block">
                         <LineChart
                             data={props.chart.data}
                             margin={{
@@ -62,12 +62,12 @@ const Single = (props: SingleProps) => {
                     </ResponsiveContainer>
                 )}
             </div>
-            <div className="flex h-full flex-col justify-between gap-2">
+            <div className="flex h-full flex-col items-start justify-between gap-2">
                 <h2 className="text-xl font-semibold text-soft">Latest Activites</h2>
                 {props.activities && (
-                    <ul className="bordere-solid flex flex-col self-end border-l border-[#f45b69] ">
+                    <ul className="bordere-solid flex flex-col self-start justify-self-end border-l border-[#f45b69] ">
                         {props.activities.map((activity) => (
-                            <li className="relative mt-8 flex w-[400px] flex-col gap-2 rounded-md bg-[#f45b6810] px-2 py-2">
+                            <li className="relative mt-8 flex min-w-[200px] flex-col gap-2 rounded-md bg-[#f45b6810] px-2 py-2 md:min-w-[400px]">
                                 <div className="absolute -left-1 bottom-0 h-2 w-2 rounded-full bg-[#f45b69]"></div>
                                 <span className="text-sm">{activity.text}</span>
                                 <span className="text-xs text-soft">{activity.time}</span>

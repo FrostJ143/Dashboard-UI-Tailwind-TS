@@ -5,11 +5,23 @@ const Navbar = () => {
                 <img src="../../public/conversionicon.svg" alt="" />
                 <span>Sangadmin</span>
             </div>
-            <div className="flex-center gap-x-20">
+            <div className="flex-center gap-x-4 sm:gap-x-20">
                 <div className="flex-center">
-                    <img className="cursor-pointer " src="../../public/search.svg" alt="" />
-                    <img className="ml-5 cursor-pointer" src="../../public/app.svg" alt="" />
-                    <img className="ml-5 cursor-pointer" src="../../public/expand.svg" alt="" />
+                    <img
+                        className="hidden cursor-pointer sm:block"
+                        src="../../public/search.svg"
+                        alt=""
+                    />
+                    <img
+                        className="ml-5 hidden cursor-pointer sm:block"
+                        src="../../public/app.svg"
+                        alt=""
+                    />
+                    <img
+                        className="ml-5 hidden cursor-pointer sm:block"
+                        src="../../public/expand.svg"
+                        alt=""
+                    />
                     <div className="relative cursor-pointer">
                         <img className="ml-5" src="../../public/notifications.svg" alt="" />
                         <span className="flex-center absolute -right-2 -top-1 h-3.5 w-3.5 rounded-full bg-red-600 text-xs">
@@ -25,7 +37,7 @@ const Navbar = () => {
                     />
                     <span className="ml-3">Sang</span>
                 </div>
-                <div className="cursor-pointer">
+                <div className="hidden cursor-pointer sm:block">
                     <img src="../../public/settings.svg" alt="" />
                 </div>
             </div>
